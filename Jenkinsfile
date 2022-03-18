@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'serve -s build'
+                sh 'npm run build'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
             }
         }
